@@ -5,6 +5,9 @@ services:
     build:
       context: .
       dockerfile: docker/nodejs/Dockerfile
+      target: installer
+    environment:
+      - NODE_ENV=development
     volumes:
       - .:/usr/src/app
     ports:
