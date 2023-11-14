@@ -6,3 +6,6 @@ USER node
 WORKDIR /usr/src/app
 
 RUN yarn policies set-version $YARN_VERSION
+RUN yarn install
+
+CMD ["yarn", "start"]
